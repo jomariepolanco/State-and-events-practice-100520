@@ -1,8 +1,19 @@
 import React, { Component } from "react";
+import {apiResponse} from '../api'
+import DogCard from '../Components/DogCard'
 
 class DogsList extends Component {
+
+  dogs = () => {
+    return apiResponse.map(dogObject => <DogCard key={dogObject.id} dog={dogObject}/>)
+  }
   render() {
-    return <div className="list">{/*list of dogs go here*/}</div>;
+    // console.log(this.dogs())
+    return(
+      <div className="list">
+        {this.dogs()}
+      </div>
+    )
   }
 }
 
