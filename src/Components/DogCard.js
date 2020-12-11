@@ -23,7 +23,7 @@ class DogCard extends React.Component{
         <span className="bark">
           <button onClick={this.handleClick}>Bark</button>
         </span>
-        {this.state.bark === false ? "" : <h3>Bark</h3>}
+        {this.state.bark === false ? null : <h3>Bark</h3>}
       </div>
     );
   }
